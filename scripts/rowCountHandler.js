@@ -9,7 +9,7 @@ chrome.storage.sync.get(['rowCount'])
         console.error('Error retrieving settings:', error)
     });
 
-setRowCountElement.addEventListener('change', function () {
+setRowCountElement?.addEventListener('change', function () {
     const rowCountValue = this.value;
 
     chrome.storage.sync.set({ rowCount: rowCountValue }).then(

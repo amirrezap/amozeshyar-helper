@@ -71,7 +71,7 @@ function detective() {
     setRowCounts()
 
     const crsNameName = "parameter(f^crsName)"
-    const crsNameID = document.getElementsByName("parameter(f^crsName)")[0].id
+    const crsNameID = document.getElementsByName("parameter(f^crsName)")[0]?.id
     const crsName = document.getElementById(crsNameID)
 
     const crsCodeName = "parameter(f^crsCode)"
@@ -129,7 +129,15 @@ if (OTP) {
 
 const pathname = window.location.pathname
 
-const isInHandleCourseClassSearchAction = pathname.includes("/handleCourseClassSearchAction") || pathname.includes("/pSearchAction")
+const isInHandleCourseClassSearchAction =
+    pathname.includes("/handleCourseClassSearchAction")
+    ||
+    pathname.includes("/pSearchAction")
+    ||
+    pathname.includes("/operationalPropertiesAction")
+    ||
+    document.querySelector("legend")?.innerText === 'جستجوي كلاس درس'
+
 if (isInHandleCourseClassSearchAction) {
 
     const inputs = document.getElementsByTagName("input")
@@ -164,7 +172,11 @@ if (isInHandleCourseClassSearchAction) {
 
 
 }
-else if (pathname.includes("/registerationAction")) {
+else if (
+    pathname.includes("/registerationAction")
+    ||
+    (document.getElementsByName("parameter(f^crsName)")?.length > 0 && !!document.getElementsByName("parameter(f^crsName)")[0]?.id)
+) {
     document.addEventListener("click", detective);
 }
 else if (pathname.includes("studentProffEvaluation")) {
