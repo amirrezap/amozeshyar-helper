@@ -1,0 +1,27 @@
+html {
+    min-height: 512px;
+}
+
+body {
+    display: block;
+    margin: 8px;
+    font-size: 12px;
+    font-family: "Vazirmatn";
+    min-height: 150px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+span {
+    font-size: 12px;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}

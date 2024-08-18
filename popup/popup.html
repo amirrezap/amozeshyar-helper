@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../styles/font-face.css" >
+    <link rel="stylesheet" href="../styles/app.css" >
+</head>
+
+<body>
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="background: url('../assets/header.png');background-size: cover;width: 300px;height: 185.547px;"></div>
+        <h1 class="mb-0">Amozeshyar Helper</h1>
+        <h3 class="mb-0">تبدیل خودکار و سریع نوشته‌ها</h3>
+        <span>بهینه شده برای سرعت بخشیدن به فرایند انتخاب واحد</span>
+
+        <div style="margin-top: 24px;direction: rtl;">
+            <span>تعداد نتيجه جستجو در صفحه:</span>
+            <select id="setRowCount" style="cursor: pointer;">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </div>
+        <div id="setRowCountMessage" style="color: green;direction: rtl;"></div>
+    </div>
+
+    <script src="../scripts/rowCountHandler.js"></script>
+
+</body>
+
+</html>

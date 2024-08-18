@@ -1,0 +1,62 @@
+{
+  "name": "Amozeshyar Helper",
+  "description": "A helper extension for working with Amozeshyar.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon128.png"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "64": "icons/icon64.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "amozeshyarhelperselfhosted@gmail.com",
+      "strict_min_version": "109.0"
+    }
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js", "scripts/rowCountHandler.js"],
+      "matches": [
+        "https://stdn.iau.ir/Student/registerationAction.do",
+        "https://stdn.iau.ir/Student/handleCourseClassSearchAction.do",
+        "https://stdn.iau.ir/Student/handleCourseClassSearchAction.do*",
+        "https://stdn.iau.ir/Student/pSearchAction.do",
+        "https://stdn.iau.ir/Student/Pages/acmstd/loginPage.jsp",
+        "https://stdn.iau.ir/Student/captchaProcess",
+        "https://stdn.iau.ir/Student/manageAccount",
+
+        "https://stdn.iau.ir/Student/studentProffEvaluation.do",
+        "https://stdn.iau.ir/Student/studentProffEvaluation.do*",
+
+        "https://stdn2.iau.ir/Student/registerationAction.do",
+        "https://stdn2.iau.ir/Student/handleCourseClassSearchAction.do",
+        "https://stdn2.iau.ir/Student/handleCourseClassSearchAction.do*",
+        "https://stdn2.iau.ir/Student/pSearchAction.do",
+        "https://stdn2.iau.ir/Student/Pages/acmstd/loginPage.jsp",
+        "https://stdn2.iau.ir/Student/captchaProcess",
+        "https://stdn2.iau.ir/Student/manageAccount",
+
+        "https://stdn2.iau.ir/Student/studentProffEvaluation.do",
+        "https://stdn2.iau.ir/Student/studentProffEvaluation.do*",
+
+        "https://eserv.iau.ir/EServices/handleCourseClassSearchAction.do",
+        "https://eserv.iau.ir/EServices/handleCourseClassSearchAction.do*",
+        "https://eserv.iau.ir/EServices/pSearchAction.do",
+        "https://eserv.iau.ir/EServices/Pages/acmstd/loginPage.jsp",
+        "https://eserv.iau.ir/EServices/captchaProcess",
+        "https://eserv.iau.ir/EServices/manageAccount",
+
+        "https://eserv.iau.ir/Student/studentProffEvaluation.do",
+        "https://eserv.iau.ir/Student/studentProffEvaluation.do*"
+      ]
+    }
+  ]
+}
